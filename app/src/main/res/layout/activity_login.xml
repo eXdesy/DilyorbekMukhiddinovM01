@@ -64,13 +64,13 @@
 
         <EditText
             android:id="@+id/editTextUsuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="255dp"
+            android:layout_height="49dp"
             android:ems="10"
             android:hint="@string/textView_username"
             android:inputType="text"
-            android:textColorHint="#5B5B5B"
             android:textColor="#FFF"
+            android:textColorHint="#5B5B5B"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -78,13 +78,13 @@
 
         <EditText
             android:id="@+id/editTextContraseña"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="252dp"
+            android:layout_height="52dp"
             android:ems="10"
             android:hint="@string/textView_password"
             android:inputType="textPassword"
-            android:textColorHint="#5B5B5B"
             android:textColor="#FFF"
+            android:textColorHint="#5B5B5B"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

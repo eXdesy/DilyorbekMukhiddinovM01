@@ -8,9 +8,16 @@
     <string name="textView_verific">Login correcto</string>
     <string name="textView_password">Contraseña</string>
     <string name="textView_username">Nombre</string>
+    <string name="textView_home">Hola Mundo</string>
 
     <string name="button_plus">+</string>
     <string name="button_minus">-</string>
     <string name="button_reset">RESET</string>
     <string name="button_login">LOGIN</string>
+    <string name="button_fragment1">HOME</string>
+    <string name="button_fragment2">CONTADOR</string>
+    <string name="button_fragment3">EXIT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

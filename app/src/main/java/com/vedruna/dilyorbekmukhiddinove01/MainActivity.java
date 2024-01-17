@@ -1,68 +1,36 @@
 package com.vedruna.dilyorbekmukhiddinove01;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-
-    private TextView textViewNumero;
-    private int contador = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textViewNumero = findViewById(R.id.textView_numero);
+        // Configurar BottomNavigationView
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.navigation_home);
 
-        Button buttonPlus = findViewById(R.id.button_plus);
-        Button buttonMinus = findViewById(R.id.button_minus);
-        Button buttonReset = findViewById(R.id.button_reset);
+        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView);
 
-        buttonPlus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                incrementarContador();
+        NavController navController = navHostFragment.getNavController();
+
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.navigation_home) {
+                navController.navigate(R.id.homeFragment);
+            } else if (item.getItemId() == R.id.navigation_counter) {
+                navController.navigate(R.id.counterFragment);
+            } else if (item.getItemId() == R.id.navigation_settings) {
+                navController.navigate(R.id.settingsFragment);
             }
+            return true;
         });
-
-        buttonMinus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                decrementarContador();
-            }
-        });
-
-        buttonReset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                resetearContador();
-            }
-        });
-    }
-
-    private void incrementarContador() {
-        contador++;
-        actualizarTextView();
-    }
-
-    private void decrementarContador() {
-        if (contador > 0) {
-            contador--;
-            actualizarTextView();
-        }
-    }
-
-    private void resetearContador() {
-        contador = 0;
-        actualizarTextView();
-    }
-
-    private void actualizarTextView() {
-        textViewNumero.setText(String.valueOf(contador));
     }
 }
