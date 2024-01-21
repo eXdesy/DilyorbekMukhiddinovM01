@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
                 navController.navigate(R.id.homeFragment);
             } else if (item.getItemId() == R.id.navigation_counter) {
                 navController.navigate(R.id.counterFragment);
+            } else if (item.getItemId() == R.id.navigation_api) {
+                navController.navigate(R.id.apiFragment);
             } else if (item.getItemId() == R.id.navigation_settings) {
                 navController.navigate(R.id.settingsFragment);
             }

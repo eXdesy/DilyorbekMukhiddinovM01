@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_apiFragment"
+            app:destination="@id/apiFragment" />
     </fragment>
     <fragment
         android:id="@+id/counterFragment"
@@ -27,5 +30,10 @@
         android:name="com.vedruna.dilyorbekmukhiddinove01.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/apiFragment"
+        android:name="com.vedruna.dilyorbekmukhiddinove01.ApiFragment"
+        android:label="fragment_api"
+        tools:layout="@layout/fragment_api" />
 
 </navigation>
